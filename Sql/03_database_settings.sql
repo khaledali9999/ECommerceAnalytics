@@ -1,0 +1,4 @@
+-- يتشغل مرة واحدة. RCSI: القراءات (التقارير) ماتتعطلش بالكتابات وماتعملش Blocking.
+ALTER DATABASE ECommerceAnalytics SET READ_COMMITTED_SNAPSHOT ON WITH ROLLBACK IMMEDIATE;
+ALTER DATABASE ECommerceAnalytics SET QUERY_STORE = ON;
+ALTER DATABASE ECommerceAnalytics SET QUERY_STORE (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);
